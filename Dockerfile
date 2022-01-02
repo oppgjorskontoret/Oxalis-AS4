@@ -7,6 +7,6 @@ RUN cd $MAVEN_HOME \
  && cp -r target/$(ls target | grep "\-dist$" | head -1) /dist
 
 
-FROM norstella/oxalis:latest
+FROM ghcr.io/oppgjorskontoret/oxalis/oxalis:5.0.6-with-statistics-enabled
 
 COPY --from=mvn /dist /oxalis/ext
